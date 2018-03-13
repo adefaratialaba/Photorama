@@ -16,8 +16,8 @@ class PhotosViewController: UIViewController {
         super.viewDidLoad()
         
         store.fetchInterestingPhotos{
-            (PhotoResult) ->Void in
-            switch PhotoResult{
+            (photosResult) ->Void in
+            switch photosResult{
             case let .success(photos):
                 print("Successfully found \(photos.count) photos.")
                 

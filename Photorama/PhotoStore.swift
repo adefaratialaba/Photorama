@@ -18,7 +18,7 @@ enum PhotoError: Error {
     case imageCreationError
 }
 
-enum PhotoResult {
+enum PhotosResult {
     case success([Photo])
     case failure([Error])
 }
@@ -29,7 +29,7 @@ class PhotoStore {
         let config = URLSessionConfiguration.default
         return URLSession(configuration:config)
     }()
-    func fetchInterestingPhotos(completion : @escaping(PhotoResult)->Void) {
+    func fetchInterestingPhotos(completion : @escaping(PhotosResult)->Void) {
         let url = FlickrAPI.interestingPhotosURL
         let request = URLRequest(url:url)
         let task = session.dataTask(with: request){
@@ -87,7 +87,7 @@ class PhotoStore {
         return .success(image)
     }
     
-    private func processPhotosRequest(data: Data?, error:Error?) ->PhotoResult{
+    private func processPhotosRequest(data: Data?, error: Error?) ->PhotosResult{
         guard
             let jsonData = data else{
                 return .failure([error!])
