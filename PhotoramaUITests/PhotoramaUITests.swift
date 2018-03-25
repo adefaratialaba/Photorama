@@ -2,8 +2,8 @@
 //  PhotoramaUITests.swift
 //  PhotoramaUITests
 //
-//  Created by Sumit Ganju on 2018-03-12.
-//  Copyright © 2018 Centennial College. All rights reserved.
+//  Created by alaba azeezadefarati on 2018-03-25.
+//  Copyright © 2018 alaba azeezadefarati. All rights reserved.
 //
 
 import XCTest
