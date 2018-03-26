@@ -18,7 +18,7 @@ enum Method: String {
 
 struct FlickrAPI {
     private static let baseURLString = "https://api.flickr.com/services/rest"
-    private static let apiKey = "40c7bbee397489819102220a79091248"
+    private static let apiKey = "a6d819499131071f158fd740860a5a88"
     
     private static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
